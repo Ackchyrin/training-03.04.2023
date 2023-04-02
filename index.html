@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обучение 03.04.2023</title>
     <link href="/training-03.04.2023/index.css" rel="stylesheet">
+    <link rel="icon" href="/training-03.04.2023/images/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -59,7 +60,7 @@
         </div>
         <pre class="main-code">
 <span>async function getImages(){</span>
-<span>    response = await fetch('/training-03.04.2023images/1.jpg')</span>
+<span>    response = await fetch('/training-03.04.2023/images/1.jpg')</span>
 <span>    result = await response.blob();</span>
 <span>    document.querySelector('.imgOne').src = URL.createObjectURL(result);</span>
 <span>}</span></pre>
