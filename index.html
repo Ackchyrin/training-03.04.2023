@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Обучение 03.04.2023</title>
-    <link href="/index.css" rel="stylesheet">
+    <link href="/training-03.04.2023/index.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -59,7 +59,7 @@
         </div>
         <pre class="main-code">
 <span>async function getImages(){</span>
-<span>    response = await fetch('images/1.jpg')</span>
+<span>    response = await fetch('/training-03.04.2023images/1.jpg')</span>
 <span>    result = await response.blob();</span>
 <span>    document.querySelector('.imgOne').src = URL.createObjectURL(result);</span>
 <span>}</span></pre>
@@ -87,13 +87,13 @@ emailPerson:emailPerson</pre>
 await fetch('.../registerPerson.php?namePerson=namePerson<br>&nameSecondPerson=nameSecondPerson&patronymicPerson=patronymicPerson<br>&passwordPerson=passwordPerson&phonePerson=phonePerson&emailPerson=emailPerson')</pre>
             Да вопрос зачем нам гет запрос, туфта какая то. Вот эта странца получена гет запросом. Поэтому вы бы не увидели данную презентацию
         </div>
-        <img class="main-img" src="screen/scr1.png" alt="Скриншот примера">
+        <img class="main-img" src="/training-03.04.2023/screen/scr1.png" alt="Скриншот примера">
         <div class="main-text-technology">
             Так давайте напишем пост запрос.
         </div>
         <div class="main-text-technology">
             Это Витя:
-            <img class="main-img" src="screen/user.jpeg" alt="Скриншот примера">
+            <img class="main-img" src="/training-03.04.2023/screen/user.jpeg" alt="Скриншот примера">
             он давно пользуется нашим ресурсом и ему надоел дизайн он хочет его сменить. Хорошо что разработчики в последнем обновление добавили такую функцию
         </div>
         <div class="main-flex">
