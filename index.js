@@ -4,7 +4,7 @@ document.querySelector('.main-link a').addEventListener('click',()=>{
 })
 
 async function getImages(){
-    response = await fetch('/training-03.04.2023images/1.jpg')
+    response = await fetch('/training-03.04.2023/images/1.jpg')
     result = await response.blob();
     img = URL.createObjectURL(result);
     document.querySelector('.imgOne').src = img
