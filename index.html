@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обучение 03.04.2023</title>
+    <link href="/index.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="main-text">
+            Я ради вас собак пишу текст в субботу 1 апреля. Но я его написал и фоточки сделал. Приходится заниматься хуй**й. Хотя могли почитать в интернете, я от туда и брал информацию. Ещё страницу сверстал.
+        </div>
+        <div class="main-title">
+            Презентация от "Алё че там с деньгами."
+        </div>
+        <div class="main-title">
+            Создателей "куда звонишь?"
+        </div>
+        <div class="main-content">
+            `Как написать 6 строчек кода за час`
+        </div>
+        <div class="main-text-technology">
+            XMLHttpRequest (XMLHTTP, XHR) — API, доступный в скриптовых языках браузеров, таких как JavaScript. Использует запросы HTTP или HTTPS напрямую к веб-серверу и загружает данные ответа сервера напрямую в вызывающий скрипт. Информация может передаваться в любом текстовом формате, например, в XML, HTML или JSON. Позволяет осуществлять HTTP-запросы к серверу без перезагрузки страницы.
+        </div>
+        <div class="main-link active">
+            Бля душнила включи <a class="main-link-first" target="_blank" href="https://www.youtube.com/watch?v=AFuhmFC0Tmw&ab_channel=ChillLofi-NickMusic">музыку</a>
+        </div>
+        <div class="main-link">
+            Долбаёб че включил <a target="_blank" href="https://youtu.be/4O74Zy5-gRQ?t=13" class="main-link-second">Вот тема</a>
+        </div>
+        <div class="main-resume">
+            Скажи "продолжим"
+        </div>
+        <div class="main-text-technology">
+            Что это нам даёт. Возможность работать с сервером на прямую без перезагрузки. Но всегда можно делать красиво. Для данных операций есть тег "form". Но у него есть 1 минус. Он перезагружает страницу при любом виде запроса, этого можно избежеть при помощи скриптов. Но если у нас есть доступ к скриптам, то зачем нам такая технология, если можно сделать самому. Итог тег "form" стандартный обработчик на html его использу.т ведь у него по мимо минусов есть и плюсы: стандартная, довольная не плохая валидация. И да тег форм можно стелизовать очень балдёжно и ошибочку красиво вывести и инпуту один за другим показывать, ток придётся js использовать.
+        </div>
+        <div class="main-text-end">
+            Спасибо за внимание
+        </div>
+        <div class="main-text-technology">
+            Ладно продолжим, так что же делать если хочется как ты говоришь сделать нормально на js? Правильно использовать технологию AJAX. Это название используют либо олды или те кто 1 раз в жизни использовал jQuery. Сейчас она называется Fetch.
+        </div>
+        <div class="main-text-technology">
+            У "фетча" есть проблемы, он является современным. Правильно мои маленькие пользователи айфонами, он не может работать в старых браузерах поэтому нужно использовать полифил. Но у нас презентация не о кроссбраузерности, а о запросах и с чем их едят.
+        </div>
+        <div class="main-text-technology">
+            Так как же написать fetch запрос? Существует специальный синтаксис для работы с промисами, который называется «async/await». Он удивительно прост для понимания и использования.
+        </div>
+        <div class="main-text-technology">
+            У слова async один простой смысл: эта функция всегда возвращает промис. Значения других типов оборачиваются в завершившийся успешно промис автоматически.
+        </div>
+        <div class="main-text-technology">
+            Ключевое слово await заставит интерпретатор JavaScript ждать до тех пор, пока промис справа от await не выполнится. После чего оно вернёт его результат, и выполнение кода продолжится.
+        </div>
+        <pre class="main-code">
+<span>async function getImages(){</span>
+<span>    response = await fetch('images/1.jpg')</span>
+<span>    result = await response.blob();</span>
+<span>    document.querySelector('.imgOne').src = URL.createObjectURL(result);</span>
+<span>}</span></pre>
+        <div class="main-text-technology">
+            Что мы видим в данном коде?
+        </div>
+        <div class="main-button" onclick="getImages()">
+            Тыкай
+        </div>
+        <img class="main-img imgOne" src="" alt="Картинка для получения">
+        <div class="main-text-technology">
+            Но мы же можем и так фотку получить. Ты какую-то дичь втираешь. Это мы ещё про технологию говорим, а не применние.
+        </div>
+        <div class="main-text-technology">
+            Это был пример GET запроса. Get запрос позволяет нам получать данные с сервера. В качестве ответа мы получаем информацию файла к которому обращаемся. Но при этом мы не может отправлять переменные. Да мы можем обратиться к файлу через гет-параметры. Но что лучше отправлять информацию красивенько и читабельно
+            <pre class="main-code">
+namePerson:namePerson,
+nameSecondPerson:nameSecondPerson,
+patronymicPerson:patronymicPerson,
+passwordPerson:passwordPerson,
+phonePerson:phonePerson,
+emailPerson:emailPerson</pre>
+            или пихать в гет параметры ?
+            <pre class="main-code">
+await fetch('.../registerPerson.php?namePerson=namePerson<br>&nameSecondPerson=nameSecondPerson&patronymicPerson=patronymicPerson<br>&passwordPerson=passwordPerson&phonePerson=phonePerson&emailPerson=emailPerson')</pre>
+            Да вопрос зачем нам гет запрос, туфта какая то. Вот эта странца получена гет запросом. Поэтому вы бы не увидели данную презентацию
+        </div>
+        <img class="main-img" src="screen/scr1.png" alt="Скриншот примера">
+        <div class="main-text-technology">
+            Так давайте напишем пост запрос.
+        </div>
+        <div class="main-text-technology">
+            Это Витя:
+            <img class="main-img" src="screen/user.jpeg" alt="Скриншот примера">
+            он давно пользуется нашим ресурсом и ему надоел дизайн он хочет его сменить. Хорошо что разработчики в последнем обновление добавили такую функцию
+        </div>
+        <div class="main-flex">
+            <div class="main-button color-one" onclick="postNewBackground('#915f6d')">
+                #915f6d
+            </div>
+            <div class="main-button color-two" onclick="postNewBackground('#987654')">
+                #987654
+            </div>
+            <div class="main-button color-tree" onclick="postNewBackground('#87a96b')">
+                #87a96b
+            </div>
+            <div class="main-button color-phour" onclick="postNewBackground('#ed9121')">
+                #ed9121
+            </div>
+        </div>
+        <div class="main-text-technology">
+            А как это выглядит в коде?
+        </div>
+        <pre class="main-code">
+<span>async function postNewBackground(x){</span>
+<span>    let response = await fetch('..../setNewBackgroundUser.php', {</span>
+<span>        method: 'POST',</span>
+<span>        headers: {</span>
+<span>            'Content-Type': 'application/json;charset=utf-8',</span>
+<span>        },</span>
+<span>        body: JSON.stringify({</span>
+<span>            userId:userId,</span>
+<span>            newBackground:x</span>
+<span>        })</span>
+<span>    })</span>
+<span>    result = await response.json();</span>
+<span>    if(result == true){</span>
+<span>        document.querySelector('main').style.backgroundColor  = x</span>
+<span>    }else{</span>
+<span>        alert('Извините произошла ошибка')</span>
+<span>    }</span>
+<span>}</span></pre>
+        <div class="main-text-technology">
+            Разбёрем код. Первую и вторую строчку вы уже знаете. Но что там на 3 строчке? Метод. Там есть стандарт это GET и POST. Там может быть что угодно. Самое главное что бы сервер мог обработать это. Четвёртая, пятая и шестая строчка единна, но что она обозначет. Application - заявка она будет в формате JSON, кодировке UTF-8. Эх хорошо знать английский, а то есть уники которые учат другие языки. Так, а что с седьмой, восьмой, девятой и десотой строчкой ? Она обозначает что в теле нашего запроса будут данные в формате JSON переобразованные из строки. Хорошо а 12, ожидание ответа в формате JSON. Потому что сервер отдаёт нам ответ в этом формате. Для нас он будет выглядить 
+            <pre class="main-code">
+[{"true"}]</pre>
+            После принятие и обработки он будет выгдить вот так:
+            <pre class="main-code">result = true</pre>
+            После не много JS и магия работает или нет
+        </div>
+        <div class="main-text-technology">
+            Теперь у Вити всегда на сайте будет выбранный им дизайн.
+        </div>
+        <div class="main-text-technology">
+            Но наша специальность требует обработки и со стороны сервера.Для этого давай-те перейдем в файл setNewBackgroundUser.php.
+        </div>
+        <pre class="main-code">
+<span>&#60;?require $_SERVER["DOCUMENT_ROOT"]."/bitrix/modules/main/include/prolog_before.php";</span>
+<span>$_POST = json_decode(file_get_contents("php://input"), true); </span>
+<span>$fields = Array(</span>
+<span>  "BACKGROUND_USER" => $_POST['newBackground'],</span>
+<span>);</span>
+<span>$user->Update($_POST['userId'], $fields);</span>
+<span>echo json_encode(true);</span>
+<span>?></span></pre>
+    </main>
+    <div class="main-text-technology">
+        Так что у нас тут. 1 строчка открытие PHP тегов и подключение обработчика, без него у вас не будут работать php файлы. 2 срочка принятие данных, можно и не писать если вы отправляете данные не в формате JSON. Третья, четвёртая и пятая строчка  это поля информации которые мы будем менять. Шестая строчка обновление задааных полей у пользователя по его ID и нашим данным. Седьмая выводит ответ TRUE в формате JSON Восьмая закрытие php.
+    </div>
+    <div class="main-text-end">
+       Вот теперь точно спасибо за внимание.
+    </div>
+    <script src="/index.js"></script>
+</body>
+</html>
